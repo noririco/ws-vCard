@@ -1,0 +1,194 @@
+/*
+*   CSS stylesheet for We Share vCard landing page.
+*   Please note: this is LTR.
+*   Note: the font-family Assistant is provided by:
+*       <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Assistant">
+*/
+body{
+    margin: 0 auto;
+    padding:0;
+    background-color: #ffffff;
+    /* background-color: #ffffff; */
+    font-family: 'Assistant', sans-serif;
+    /* overflow: hidden; */
+    /* overflow: none; */
+}
+
+/**
+*   Grid Wrappers
+*/
+#wrapper {
+    display: grid;
+    background-color: #d4d6d7;
+    width: 100%;
+    height: 100%;          
+    grid-template-rows: repeat(9,auto);
+    grid-template-columns: 100vw;
+    grid-gap: 0;
+    overflow: hidden;
+    
+}
+
+.grid-item {
+    font-size: 14px;
+    font-weight: 100;
+    display: flex;
+}
+
+@media only screen and (min-width: 480px) {
+    #wrapper {
+        display: grid;
+        background-color: #d4d6d7;
+        width: 100%;
+        height: 100%;      
+        /* grid-template-rows: repeat(3,auto); */
+        grid-template-rows: 30% 40% 30%;
+        grid-template-columns: repeat(3,auto);
+        grid-gap: 0;
+        overflow: hidden;
+        /* border: 1px solid green; */
+    }
+    img {
+        width: 5%;
+    }
+    
+    .grid-item {
+        display: flex;
+        border: 1px solid green;        
+    }
+
+    #logo-bg {
+        /* grid-area: content-top; */
+        grid-row: 1 / span 3;
+        grid-column: 1 / span 3;
+        align-items: center;
+        justify-content: center;
+        /* min-width: 0;
+        min-height: 0; */
+    }
+    #logo-bg img {
+        width: 57%;
+        /* height: 100%; */
+        /* margin-right: 0;
+        margin-bottom: 1em; */
+        /* background-repeat:no-repeat;
+        background-size: center;
+        background-position:center; */
+        z-index: 7;
+    }
+    #left-rect {
+        grid-row: 1 / span 2;
+        grid-column: 1 / span 1;
+        align-items: flex-start;
+        justify-content: flex-start;
+    }
+    #left-rect img {
+        width: 20%;
+    }
+    #right-rect {
+        /* grid-area: content-top; */
+        grid-row: 2 / span 2;
+        grid-column: 3 / span 1;
+        align-items: center;
+        justify-content: flex-end;
+    }
+    #right-rect img {
+        width: 23%;
+    }
+    #left-net {
+        /* grid-area: content-top; */
+        grid-row: 2 / span 2;
+        grid-column: 1 / span 1;
+        align-items: flex-end;
+        justify-content: flex-start;
+    }
+    #left-net img {
+        width: 80%;
+        transform: scaleX(-1);
+        /* -webkit-transform: rotate(90deg); 
+        -moz-transform: rotate(90deg);        
+        -o-transform: rotate(90deg);          
+        -ms-transform: rotate(90deg);         
+        transform: rotate(90deg);              */
+    }
+    #right-net {
+        /* grid-area: content-top; */
+        grid-row: 1 / span 1;
+        grid-column: 3 / span 1;
+        align-items: flex-start;
+        justify-content: flex-end;
+    }
+    #right-net img {
+        width: 70%;
+        transform: scaleY(-1);
+    }
+    #media {
+        grid-row: 3 / span 1;
+        grid-column: 3 / span 1;
+        align-items: flex-start;
+        justify-content: center;
+    }
+
+    .media-rows {
+        display: flex;
+        flex-direction: column;
+
+    }
+    .media-row-top {
+        display: flex;
+        justify-content: center;
+    }
+    .media-row-bot {
+        display: flex;
+        justify-content: center;      
+    }
+    .wrapper-image{
+        min-width: 0;
+        margin: 0.7em;
+    }
+    .wrapper-image img{
+        width: 4vw;
+        max-width: 100%; 
+        /* max-height: 450px;  */
+    }
+    
+    #mid {
+        grid-row: 2 / span 2;
+        grid-column: 2 / span 1;
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-start;
+        /* padding-top: 2em; */
+    }
+    #mid img {
+        width: 35%;
+        border-radius: 50%;
+    }
+    #mid .textWrapper-top{
+        font-size: 4vw;
+    }
+    #mid .textWrapper-bot{
+        font-size: 2vw;
+    }
+    #showcase {
+        grid-row: 1 / span 1;
+        grid-column: 1 / span 2;
+        align-items: center;
+        justify-content: center;
+    }
+    #showcase .textWrapper{
+        /* margin-right: 3em; */
+        display:flex;
+        flex-direction: column;  
+        align-items: center;
+        justify-content: center;
+        margin-right: 150px;
+        margin-bottom: 150px;
+    }
+    #showcase .textWrapper-top{
+        font-size: 5vw;
+    }
+    #showcase .textWrapper-bot{
+        font-size: 4vw;
+    }
+}
